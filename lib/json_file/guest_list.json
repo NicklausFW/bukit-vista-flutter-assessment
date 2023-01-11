@@ -1,31 +1,25 @@
 [
   {
   "id": 0,
-  "name": "Kateryna",
+  "name": "Kateryna Marshal",
   "imageUrl": "https://ph-files.imgix.net/81c8176a-1b00-4f10-b60f-2ab2729d0a14.png?auto=format",
-  "country": "Ukraine"
-},
-  {
-    "id": 1,
-    "name": "Bridget",
-    "imageUrl": "https://d33wubrfki0l68.cloudfront.net/b6f06acb56add5ee5b6bd90048e0e11111fb312c/25c0a/img/thispersondoesnotexist.png",
-    "country": "Ireland"
-  },{
-  "id": 2,
-  "name": "Emmeline",
-  "imageUrl": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fdcb60d23-fd08-4eba-aa07-a4985ca65474_1024x1024.jpeg",
-  "country": "German"
-}
-,{
-  "id": 3,
-  "name": "Emmeline",
-  "imageUrl": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fdcb60d23-fd08-4eba-aa07-a4985ca65474_1024x1024.jpeg",
-  "country": "German"
-}
-,{
-  "id": 4,
-  "name": "Emmeline",
-  "imageUrl": "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fdcb60d23-fd08-4eba-aa07-a4985ca65474_1024x1024.jpeg",
-  "country": "German"
-}
+  "country": "Ukraine",
+  "accommodation": "Vila Casandra - 2BR",
+  "checkInTime": "14:30",
+    "checkInDate": "Aug 31, 2020",
+    "checkOutTime": "10:30",
+    "checkOutDate": "Sep 31, 2020",
+    "nights": "3",
+    "bookingId": "HMSFJ8K8KJF",
+    "bookingStatus": "Cancelled",
+    "numberOfGuest": "2",
+    "bookingValue": "Rp 12.000.000,00",
+    "phoneNumber": "082123892893",
+    "hostingDetails": {
+      "host": "Rafik Bukit Vista",
+      "profileName": "Bayu & Wayan",
+      "propertyUnit": "ME VILLA - B (1BR)",
+      "listingName": "4BR Homey Villa in Uluwatu | Kitchen + Wifi + Pool"
+    }
+  }
 ]

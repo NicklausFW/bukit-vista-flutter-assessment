@@ -1,7 +1,6 @@
 import 'package:bukit_vista_flutter_assessment/constants/booking_tabbar.dart';
 import 'package:bukit_vista_flutter_assessment/constants/color_palette.dart';
 import 'package:bukit_vista_flutter_assessment/constants/screen_size.dart';
-import 'package:bukit_vista_flutter_assessment/models/guest_list_model.dart';
 import 'package:bukit_vista_flutter_assessment/view_controllers/guest_controller.dart';
 import 'package:bukit_vista_flutter_assessment/widgets/custom_appbar.dart';
 import 'package:bukit_vista_flutter_assessment/widgets/custom_futurebuilder.dart';
@@ -47,18 +46,70 @@ class _BookingPageState extends State<BookingPage> {
             Container(
               color: Colors.white,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [Text("START DATE"), Text("10 NOV 2020")],
+                  Padding(
+                    padding: EdgeInsets.only(
+                        left: ScreenSize(context).screenWidth * 0.05),
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "START DATE",
+                            style: GoogleFonts.roboto(
+                                fontSize: 11,
+                                color: Colors.grey,
+                                fontWeight: FontWeight.w400),
+                          ),
+                          Text(
+                            "10 NOV 2020",
+                            style: GoogleFonts.roboto(
+                              fontSize: 13,
+                              color: Colors.black87,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
                   ),
                   Center(
-                    child: Text(">"),
+                    child: Container(
+                      child: Text(
+                        "›",
+                        style: GoogleFonts.roboto(
+                          fontSize: 20,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ),
                   ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [Text("END DATE"), Text("16 NOV 2020")],
+                  Padding(
+                    padding: EdgeInsets.only(
+                        right: ScreenSize(context).screenWidth * 0.05),
+                    child: Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            "END DATE",
+                            style: GoogleFonts.roboto(
+                                fontSize: 11,
+                                color: Colors.grey,
+                                fontWeight: FontWeight.w400),
+                          ),
+                          Text(
+                            "16 NOV 2020",
+                            style: GoogleFonts.roboto(
+                              fontSize: 13,
+                              color: Colors.black87,
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -66,7 +117,8 @@ class _BookingPageState extends State<BookingPage> {
               width: ScreenSize(context).screenWidth,
             ),
             Padding(
-              padding: EdgeInsets.only(left: 10),
+              padding:
+                  EdgeInsets.only(left: ScreenSize(context).screenWidth * 0.02),
               child: SizedBox(
                 height: ScreenSize(context).screenHeight * 0.08,
                 child: ListView.builder(
@@ -93,10 +145,15 @@ class _BookingPageState extends State<BookingPage> {
                                 style: BorderStyle.solid,
                                 width: 1),
                             borderRadius: BorderRadius.circular(5)),
-                        margin: EdgeInsets.fromLTRB(0, 10, 8, 5),
+                        margin: EdgeInsets.fromLTRB(
+                            0,
+                            ScreenSize(context).screenHeight * 0.02,
+                            ScreenSize(context).screenWidth * 0.02,
+                            ScreenSize(context).screenHeight * 0.01),
                         child: Center(
                           child: Padding(
-                            padding: const EdgeInsets.all(6),
+                            padding: EdgeInsets.all(
+                                ScreenSize(context).screenWidth * 0.01),
                             child: Text(
                               BookingTabBar.tabBarItems[index],
                               style: GoogleFonts.roboto(
@@ -118,17 +175,32 @@ class _BookingPageState extends State<BookingPage> {
             Row(
               children: [
                 Padding(
-                  padding: EdgeInsets.only(left: 10),
-                  child: Text("Earlier"),
+                  padding: EdgeInsets.only(
+                      top: ScreenSize(context).screenHeight * 0.01,
+                      bottom: ScreenSize(context).screenHeight * 0.01,
+                      left: ScreenSize(context).screenWidth * 0.03),
+                  child: Text(
+                    "Earlier",
+                    style: GoogleFonts.roboto(
+                      fontSize: 13,
+                      color: Colors.grey,
+                    ),
+                  ),
                 ),
                 Spacer(),
                 Padding(
-                  padding: EdgeInsets.only(right: 10),
+                  padding: EdgeInsets.only(
+                      top: ScreenSize(context).screenHeight * 0.01,
+                      bottom: ScreenSize(context).screenHeight * 0.01,
+                      right: ScreenSize(context).screenWidth * 0.03),
                   child: GestureDetector(
                     onTap: () {},
                     child: Text(
                       "Refresh",
-                      style: TextStyle(color: Color(0xfff69322)),
+                      style: GoogleFonts.roboto(
+                        fontSize: 13,
+                        color: Color(0xfff69322),
+                      ),
                     ),
                   ),
                 )
