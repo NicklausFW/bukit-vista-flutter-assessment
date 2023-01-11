@@ -4,7 +4,9 @@
 
 import 'dart:convert';
 
-class Guest {
+import 'package:equatable/equatable.dart';
+
+class Guest extends Equatable {
   Guest({
     this.id,
     this.name,
@@ -82,9 +84,13 @@ class Guest {
         "phoneNumber": phoneNumber,
         "hostingDetails": hostingDetails!.toJson(),
       };
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => throw UnimplementedError();
 }
 
-class HostingDetails {
+class HostingDetails extends Equatable {
   HostingDetails({
     this.host,
     this.profileName,
@@ -115,4 +121,8 @@ class HostingDetails {
         "propertyUnit": propertyUnit,
         "listingName": listingName,
       };
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => throw UnimplementedError();
 }

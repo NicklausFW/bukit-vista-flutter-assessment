@@ -1,11 +1,8 @@
 import 'package:bukit_vista_flutter_assessment/constants/booking_tabbar.dart';
 import 'package:bukit_vista_flutter_assessment/constants/color_palette.dart';
-import 'package:bukit_vista_flutter_assessment/constants/screen_pages.dart';
 import 'package:bukit_vista_flutter_assessment/constants/screen_size.dart';
 import 'package:bukit_vista_flutter_assessment/models/guest_list_model.dart';
-import 'package:bukit_vista_flutter_assessment/view_controllers/guest_controller.dart';
 import 'package:bukit_vista_flutter_assessment/widgets/custom_appbar.dart';
-import 'package:bukit_vista_flutter_assessment/widgets/custom_futurebuilder_guest_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
