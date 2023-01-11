@@ -6,15 +6,20 @@ import 'package:flutter/material.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CustomFutureBuilder<T> extends StatefulWidget {
-  CustomFutureBuilder({required this.future});
+class CustomFutureBuilderGuestList<T> extends StatefulWidget {
+  CustomFutureBuilderGuestList({required this.future, this.callbackFunction});
   final Future<T>? future;
+  final Function? callbackFunction;
 
   @override
-  State<CustomFutureBuilder<T>> createState() => _CustomFutureBuilderState<T>();
+  State<CustomFutureBuilderGuestList<T>> createState() =>
+      _CustomFutureBuilderGuestListState<T>();
 }
 
-class _CustomFutureBuilderState<T> extends State<CustomFutureBuilder<T>> {
+class _CustomFutureBuilderGuestListState<T>
+    extends State<CustomFutureBuilderGuestList<T>> {
+  Guest? guest;
+
   @override
   Widget build(BuildContext context) {
     return FutureBuilder<T>(
@@ -208,18 +213,23 @@ class _CustomFutureBuilderState<T> extends State<CustomFutureBuilder<T>> {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () async {
-                        await Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => BookingPageGuestDetail(
-                              items![index],
-                            ),
-                          ),
-                        );
+                      behavior: HitTestBehavior.translucent,
+                      onTap: () {
+                        guest = items![index];
+                        widget.callbackFunction!(true, guest);
+                        // await Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //     builder: (context) => BookingPageGuestDetail(
+                        //       items![index],
+                        //     ),
+                        //   ),
+                        // );
                       },
-                      child: Center(
-                        child: Container(
+                      child: SizedBox(
+                        height: ScreenSize(context).screenHeight,
+                        width: ScreenSize(context).screenWidth * 0.15,
+                        child: Center(
                           child: Text(
                             "›",
                             style: GoogleFonts.roboto(

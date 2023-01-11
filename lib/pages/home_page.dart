@@ -15,7 +15,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ScreenPages.screens[ScreenPages.currentNavigationBarIndex],
+      body: IndexedStack(
+        index: ScreenPages.currentNavigationBarIndex,
+        children: ScreenPages.screens,
+      ),
+      // ScreenPages.screens[ScreenPages.currentNavigationBarIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         selectedItemColor: const Color(0xff1076bc),

@@ -6,5 +6,10 @@ class BookingTabBar {
     "Cancelled",
     "Show All"
   ];
+  static List<String> tabBarItemsDetails = [
+    "Guest Journey",
+    "Reservation",
+  ];
   static int currentTabBarIndex = 0;
+  static int currentTabBarDetailsIndex = 0;
 }
